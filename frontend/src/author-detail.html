@@ -1,0 +1,37 @@
+<template>
+  <div class="card">
+    <div class="card-header text-white bg-primary">
+      author´s details
+    </div>
+    <div class="card-body">
+      <form role="form">
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label">Name</label>
+          <div class="col-md-9">
+            ${author.name}
+            <!-- <input type="text" placeholder="title" class="form-control" value.bind="book.title"> -->
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label">Age</label>
+          <div class="col-md-9">
+            ${author.age}
+            <!-- <input type="text" placeholder="email" class="form-control" value.bind="book.year"> -->
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label">Gender</label>
+          <div class="col-md-9">
+            ${author.gender}
+            <!-- <input type="text" placeholder="phone number" class="form-control" value.bind="book.publisher"> -->
+          </div>
+        </div>
+      </form>
+      <!-- <div>
+        <button class="btn btn-success float-right" click.delegate="save()" disabled.bind="!canSave">Save</button>
+      </div> -->
+    </div>
+  </div>
+</template>

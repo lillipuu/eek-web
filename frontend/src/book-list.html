@@ -1,0 +1,15 @@
+<template>
+  <div class="book-list">
+    <div class="list-group">
+      <a
+        repeat.for="book of booklist"
+        class="list-group-item list-group-item-action ${book.id === $parent.selectedId ? 'active' : ''}"
+        href="/books/${book.id}"
+        click.delegate="$parent.select(book)"
+      >
+        <strong>${book.title}</strong><br>
+        <small>author name here</small>
+      </a>
+    </div>
+  </div>
+</template>

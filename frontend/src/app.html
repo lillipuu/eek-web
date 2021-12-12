@@ -1,3 +1,19 @@
 <template>
-  <h1>${message}</h1>
+  <require from="./styles.css"></require>
+  <!-- <require from="./book-list"></require> -->
+
+  <nav class="navbar navbar-light bg-light border-bottom fixed-top mx-2" role="navigation">
+    <a class="navbar-brand" href="#">
+      <span>EEK - Web application</span>
+    </a>
+  </nav>
+
+  <loading-indicator loading.bind="router.isNavigating || api.isRequesting"></loading-indicator>
+
+  <div class="container-md">
+    <div class="row">
+      <!-- <book-list class="col-sm-5 col-md-4"></book-list> -->
+      <router-view class="col-sm-7 col-md-8"></router-view>
+    </div>
+  </div>
 </template>
