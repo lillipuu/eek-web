@@ -3,10 +3,7 @@ import Book from 'App/Models/Book';
 
 export default class BooksController {
   public async index({}: HttpContextContract) {
-    const books = await Book.query().preload('authors')
-    const booksJSON = books.map((book) => book.serialize())
-
-    return booksJSON
+    return await Book.query().preload('authors')
   }
 
   public async create({}: HttpContextContract) {}
