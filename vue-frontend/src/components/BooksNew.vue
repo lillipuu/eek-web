@@ -55,11 +55,9 @@ export default {
     authorIds(authors) {
       const ids = [];
       authors.map(author => ids.push(author.id))
-      console.log(ids);
       return ids
     },
     addNewNook() {
-      console.log(this.authors);
       const book = {
         title: this.title,
         publisher: this.publisher,

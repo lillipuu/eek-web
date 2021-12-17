@@ -1,10 +1,9 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
-import Database from '@ioc:Adonis/Lucid/Database'
 import Author from './../../Models/Author'
 
 export default class AuthorsController {
   public async index({}: HttpContextContract) {
-    return Database.from('authors')
+    return await Author.query()
   }
 
   public async create({}: HttpContextContract) {}

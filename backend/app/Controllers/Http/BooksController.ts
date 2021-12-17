@@ -1,5 +1,4 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
-import Author from 'App/Models/Author';
 import Book from 'App/Models/Book';
 
 export default class BooksController {
@@ -11,10 +10,6 @@ export default class BooksController {
 
   public async store(ctx: HttpContextContract) {
     const body = ctx.request.body()
-
-    console.log(body)
-    console.log(body.authors)
-
     const book = await Book.create(body)
     for (let i = 0; i < body.authors.length; i++) {
       await book.related('authors').attach([body.authors[i]])
